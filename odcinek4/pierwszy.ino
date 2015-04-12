@@ -2,7 +2,7 @@
 12.04.2015 Mateusz Jaros/The JarOS
 
 ///////////////////////////////////////
-LEDy podłączone przez rezystory pod piny cufrowe w Arduino od 0 do 13
+LEDy podłączone przez rezystory pod piny cyfrowe w Arduino od 0 do 13
 */
 
 int numerPinu = 0;
