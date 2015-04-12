@@ -1,24 +1,30 @@
+/* 
+12.04.2015 Mateusz Jaros/The JarOS
+
+///////////////////////////////////////
+LEDy podłączone przez rezystory pod piny cufrowe w Arduino od 0 do 13
+*/
+
 int numerPinu = 0;
 void setup() {
-  // put your setup code here, to run once:
   while(numerPinu < 14){
-    pinMode(numerPinu, OUTPUT);
-    //numerPinu = numerPinu +1;
-    numerPinu++;
+    pinMode(numerPinu, OUTPUT); // ustawianie pinów jako wyjście
+    // obie formy są poprawne:
+    //numerPinu = numerPinu +1; 
+    numerPinu++; 
   }
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   numerPinu = 0;
   while(numerPinu < 14){
-    digitalWrite(numerPinu, HIGH);
+    digitalWrite(numerPinu, HIGH); // zapalnie po kolei LEDów 
     numerPinu++;
     delay(1000);
   }
   delay(1000);
   do {
-    digitalWrite(numerPinu, LOW);
+    digitalWrite(numerPinu, LOW); // gaszenie po kolei LEDów
     numerPinu--;
     delay(1000);
   }while(numerPinu >= 0);
